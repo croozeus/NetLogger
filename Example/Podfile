@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'NetLogger_Example' do
+  pod 'NetLogger', :path => '../'
+
+  target 'NetLogger_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

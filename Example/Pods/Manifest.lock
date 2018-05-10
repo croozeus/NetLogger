@@ -1,5 +1,5 @@
 PODS:
-  - NetLogger (0.1.0)
+  - NetLogger (0.1.2)
 
 DEPENDENCIES:
   - NetLogger (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  NetLogger: 15fb5338b35522ea8ac7bf4e9914f605d7e81b06
+  NetLogger: 0245b62222c42dcbc849030b7624c14033ac1e9c
 
 PODFILE CHECKSUM: 5937cc32bb0e0e992ebccf6fdcfc3220e741df51
 

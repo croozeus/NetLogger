@@ -158,7 +158,9 @@
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    NSBundle *podBundle = [NSBundle bundleForClass:[self class]];
+    NSString* const frameworkBundleID  = @"org.cocoapods.NetLogger";
+    NSBundle *podBundle =[NSBundle bundleWithIdentifier:frameworkBundleID];
+    
     NLRequestDetailViewController* rdVC = [[NLRequestDetailViewController alloc] initWithNibName:@"NLRequestDetailViewController" bundle:podBundle];
     
     NSSortDescriptor* sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:nil ascending:NO selector:@selector(localizedCompare:)];

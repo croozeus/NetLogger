@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'NetLogger'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'Log and view network requests within the app itself.'
 
 # This description is used to generate tags and improve search results.
@@ -31,12 +31,12 @@ NetLogger logs the network requests made by your app. The log and details of eac
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'NetLogger/Classes/**/*'
-  
-  s.resource_bundles = {
-    'NetLogger' => ['NetLogger/Assets/*.xcassets', 'NetLogger/Classes/*.xib']
-  }
+  s.resources = ['NetLogger/Assets/*.xcassets', 'NetLogger/Classes/*.xib']
+#  s.resource_bundles = {
+#    'NetLogger' => ['NetLogger/Assets/*.xcassets', 'NetLogger/Classes/*.xib']
+#  }
 
-  s.public_header_files = 'Pod/Classes/*.h'
+  #s.public_header_files = 'Pod/Classes/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

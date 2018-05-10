@@ -22,8 +22,8 @@ pod 'NetLogger'
 
 ## Author
 
-croozeus, croozeus@yahoo.com
+Pankaj Nathani
 
 ## License
 
-NetLogger is available under the MIT license. See the LICENSE file for more info.
+NetLogger is available under the BSD license. See the LICENSE file for more info.

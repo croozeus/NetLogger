@@ -1,0 +1,6 @@
+framework module Pods_NetLogger_Tests {
+  umbrella header "Pods-NetLogger_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

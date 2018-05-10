@@ -1,0 +1,6 @@
+framework module Pods_NetLogger_Example {
+  umbrella header "Pods-NetLogger_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

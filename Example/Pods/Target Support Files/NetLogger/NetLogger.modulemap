@@ -1,0 +1,6 @@
+framework module NetLogger {
+  umbrella header "NetLogger-umbrella.h"
+
+  export *
+  module * { export * }
+}

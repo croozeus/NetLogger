@@ -1,0 +1,29 @@
+{
+  "name": "NetLogger",
+  "version": "0.1.0",
+  "summary": "A short description of NetLogger.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/croozeus/NetLogger",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "croozeus": "croozeus@yahoo.com"
+  },
+  "source": {
+    "git": "https://github.com/croozeus/NetLogger.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "NetLogger/Classes/**/*",
+  "resource_bundles": {
+    "NetLogger": [
+      "NetLogger/Assets/*.xcassets",
+      "NetLogger/Classes/*.xib"
+    ]
+  },
+  "public_header_files": "Pod/Classes/*.h"
+}

@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'NetLogger'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of NetLogger.'
+  s.summary          = 'Log and view network requests within the app itself.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,12 +18,12 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+NetLogger logs the network requests made by your app. The log and details of each such request  is available to view in real time from within the app itself. The app may make network requests using any library / pod of your choice.
                        DESC
 
   s.homepage         = 'https://github.com/croozeus/NetLogger'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.license          = { :type => 'BSD', :file => 'LICENSE' }
   s.author           = { 'croozeus' => 'croozeus@yahoo.com' }
   s.source           = { :git => 'https://github.com/croozeus/NetLogger.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
@@ -32,11 +32,11 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'NetLogger/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'NetLogger' => ['NetLogger/Assets/*.png']
-  # }
+  s.resource_bundles = {
+    'NetLogger' => ['NetLogger/Assets/*.xcassets', 'NetLogger/Classes/*.xib']
+  }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+  s.public_header_files = 'Pod/Classes/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

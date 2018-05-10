@@ -7,12 +7,16 @@
 //
 
 #import "NLAppDelegate.h"
+#import <NetLogger/NetLogger.h>
 
 @implementation NLAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    [[NetLogger sharedManager] show:ALIGN_RIGHT];
+    
     return YES;
 }
 

@@ -45,7 +45,10 @@
     [[NetRecorder sharedManager] recordRequest:request forReqId:requestTimeString];
     
     return [self mdataTaskWithRequest:request completionHandler:^(NSData * data, NSURLResponse *response, NSError *  error) {
-        completionHandler(data, response, error);
+        if (completionHandler)
+        {
+            completionHandler(data, response, error);
+        }
         NSTimeInterval  respTime = [[NSDate date] timeIntervalSince1970];
         __block NSString *respTimeString = [NSString stringWithFormat:@"%f", respTime];
         [[NetRecorder sharedManager] recordResponse:response withData:data withError:error forReqId:requestTimeString forResId:respTimeString];

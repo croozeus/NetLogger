@@ -158,8 +158,10 @@
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    NSString* const frameworkBundleID  = @"org.cocoapods.NetLogger";
-    NSBundle *podBundle =[NSBundle bundleWithIdentifier:frameworkBundleID];
+    NSBundle *bundle =[NSBundle bundleForClass:self.classForCoder];
+    NSURL* podBundleURL = [bundle URLForResource:@"NetLogger" withExtension:@"bundle"];
+    NSBundle* podBundle = [NSBundle bundleWithURL:podBundleURL];
+    
     
     NLRequestDetailViewController* rdVC = [[NLRequestDetailViewController alloc] initWithNibName:@"NLRequestDetailViewController" bundle:podBundle];
     

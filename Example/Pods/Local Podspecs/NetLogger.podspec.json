@@ -1,6 +1,6 @@
 {
   "name": "NetLogger",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "summary": "Log and view network requests within the app itself.",
   "description": "NetLogger logs the network requests made by your app. The log and details of each such request  is available to view in real time from within the app itself. The app may make network requests using any library / pod of your choice.",
   "homepage": "https://github.com/croozeus/NetLogger",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/croozeus/NetLogger.git",
-    "tag": "0.1.2"
+    "tag": "0.1.3"
   },
   "platforms": {
     "ios": "8.0"

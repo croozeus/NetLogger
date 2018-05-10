@@ -35,8 +35,10 @@
 {
     if (!self.oVC)
     {
-        NSString* const frameworkBundleID  = @"org.cocoapods.NetLogger";
-        NSBundle *podBundle =[NSBundle bundleWithIdentifier:frameworkBundleID];
+        NSBundle *bundle =[NSBundle bundleForClass:self.classForCoder];
+        NSURL* podBundleURL = [bundle URLForResource:@"NetLogger" withExtension:@"bundle"];
+        NSBundle* podBundle = [NSBundle bundleWithURL:podBundleURL];
+        
         
         self.oVC = [[NLOverlayViewController alloc] initWithNibName:@"NLOverlayViewController" bundle:podBundle];
         self.oVC.position = position;

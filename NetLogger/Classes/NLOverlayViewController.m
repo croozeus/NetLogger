@@ -22,8 +22,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    NSString* const frameworkBundleID  = @"org.cocoapods.NetLogger";
-    NSBundle *podBundle =[NSBundle bundleWithIdentifier:frameworkBundleID];
+    NSBundle *bundle =[NSBundle bundleForClass:self.classForCoder];
+    NSURL* podBundleURL = [bundle URLForResource:@"NetLogger" withExtension:@"bundle"];
+    NSBundle* podBundle = [NSBundle bundleWithURL:podBundleURL];
+    
     
     self.view.backgroundColor = [UIColor clearColor];
     [self.toolButton setImage:[UIImage imageNamed:@"network" inBundle:podBundle compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
@@ -105,8 +107,10 @@
 }
 
 - (IBAction)buttonPressed:(id)sender {
-    NSString* const frameworkBundleID  = @"org.cocoapods.NetLogger";
-    NSBundle *podBundle =[NSBundle bundleWithIdentifier:frameworkBundleID];
+    NSBundle *bundle =[NSBundle bundleForClass:self.classForCoder];
+    NSURL* podBundleURL = [bundle URLForResource:@"NetLogger" withExtension:@"bundle"];
+    NSBundle* podBundle = [NSBundle bundleWithURL:podBundleURL];
+    
 
     NLRequestListViewController* rVC = [[NLRequestListViewController alloc] initWithNibName:@"NLRequestsViewController" bundle:podBundle];
     [self presentViewController:rVC animated:YES completion:nil];

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'NetLogger'
-  s.version          = '0.1.4'
+  s.version          = '0.1.5'
   s.summary          = 'Log and view network requests within the app itself.'
 
 # This description is used to generate tags and improve search results.

@@ -30,11 +30,11 @@ NetLogger logs the network requests made by your app. The log and details of eac
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'NetLogger/Classes/**/*'
-  s.resources = ['NetLogger/Assets/*.xcassets', 'NetLogger/Classes/*.xib']
-#  s.resource_bundles = {
-#    'NetLogger' => ['NetLogger/Assets/*.xcassets', 'NetLogger/Classes/*.xib']
-#  }
+  s.source_files = 'NetLogger/Classes/**/*.{h,m}'
+
+  s.resource_bundles = {
+    'NetLogger' => ['NetLogger/Assets/*.xcassets', 'NetLogger/Classes/*.xib']
+  }
 
   #s.public_header_files = 'Pod/Classes/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

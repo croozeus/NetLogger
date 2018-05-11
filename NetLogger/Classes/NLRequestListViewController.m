@@ -126,7 +126,7 @@
     accessoryView.clipsToBounds = YES;
     accessoryView.alpha = 0.6;
     
-    if ([[[[NetRecorder sharedManager] requestDict] allKeys] containsObject:reqTime])
+    if ([[[[NetRecorder sharedManager] responseDict] allKeys] containsObject:reqTime])
     {
         NSDictionary* resDict =[[[NetRecorder sharedManager] responseDict] objectForKey:reqTime];
         NSURLResponse* res = [resDict objectForKey:NSStringFromClass ([NSURLResponse class])];

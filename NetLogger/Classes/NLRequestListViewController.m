@@ -73,12 +73,19 @@
     // Pass the selected object to the new view controller.
 }
 */
-- (IBAction)aboutPressed:(id)sender {
-    NSLog(@"aboutPressed");
-}
-
 - (IBAction)backPressed:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+- (IBAction)aboutPressed:(id)sender {
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"About "
+                                                                   message:@"This cocoapod is brought to you by the good folks at VersionN Studios. \n\nIf you have any feedback please write to info@versionn.com or say hi on the github page: https://github.com/croozeus/NetLogger"
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"Alrighty" style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action) {}];
+    
+    [alert addAction:defaultAction];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 #pragma mark - TableView methods

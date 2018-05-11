@@ -34,11 +34,11 @@
                 <constraints>
                     <constraint firstItem="Zxg-hg-LEl" firstAttribute="top" secondItem="0OV-tB-lYE" secondAttribute="bottom" constant="5" id="N0e-Ud-P31"/>
                     <constraint firstAttribute="trailing" secondItem="0OV-tB-lYE" secondAttribute="trailing" constant="15" id="O8C-KV-d9p"/>
-                    <constraint firstAttribute="bottom" secondItem="Zxg-hg-LEl" secondAttribute="bottom" constant="15.5" id="SGL-Af-oy4"/>
                     <constraint firstItem="0OV-tB-lYE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="TeQ-3n-kOx"/>
                     <constraint firstAttribute="trailing" secondItem="Zxg-hg-LEl" secondAttribute="trailing" constant="10" id="XfZ-PH-S4K"/>
                     <constraint firstItem="Zxg-hg-LEl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="dsf-2v-CDh"/>
                     <constraint firstItem="0OV-tB-lYE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="lxk-tb-Kjh"/>
+                    <constraint firstAttribute="bottom" secondItem="Zxg-hg-LEl" secondAttribute="bottom" constant="15.5" id="wxr-TP-K7e"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

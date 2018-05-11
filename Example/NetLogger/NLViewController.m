@@ -38,7 +38,7 @@
 }
 
 - (void)getReq{
-    NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://google.com/test"]];
+    NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://google.com"]];
     
     [urlRequest setHTTPMethod:@"GET"];
     

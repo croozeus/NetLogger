@@ -303,8 +303,11 @@
     }
     else if ([[self.detailsArray objectAtIndex:indexPath.row] isEqualToString:RES_SIZE]){
         if ([self noError]) {
-            float kilobytes = self.data.length / 1000;
-            detail = [NSString stringWithFormat:@"%.2f Kb",  kilobytes];
+            if (![self.data isKindOfClass:[NSNull class]])
+            {
+                float kilobytes = self.data.length / 1000;
+                detail = [NSString stringWithFormat:@"%.2f Kb",  kilobytes];
+            }
         }
         
     }

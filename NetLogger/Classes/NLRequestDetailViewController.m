@@ -9,6 +9,7 @@
 #import "NLRequestDetailViewController.h"
 #import "NetRecorder.h"
 #import "NLConstants.h"
+#import "ResponseBodyTableViewCell.h"
 
 #define REQ_URL @"URL"
 #define REQ_TYPE @"HTTP type"
@@ -64,6 +65,15 @@
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = UITableViewAutomaticDimension;
+    
+    NSBundle *bundle =[NSBundle bundleForClass:self.classForCoder];
+    NSURL* podBundleURL = [bundle URLForResource:@"NetLogger" withExtension:@"bundle"];
+    NSBundle* podBundle = [NSBundle bundleWithURL:podBundleURL];
+    
+    UINib *cellNib = [UINib nibWithNibName:@"ResponseBodyTableViewCell" bundle:podBundle];
+    [self.tableView registerNib:cellNib forCellReuseIdentifier:@"ResponseBodyTableViewCell"];
     
 }
 
@@ -142,6 +152,9 @@
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.tableView reloadData];
+                [self.tableView reloadSections:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, [self.tableView numberOfSections])] withRowAnimation:UITableViewRowAnimationNone];
+                
+
             });
         }
     }
@@ -177,6 +190,26 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
+ 
+    NSString* title = [self.detailsArray objectAtIndex:indexPath.row];
+    NSString* detail = @"N/A";
+    
+    if ([[self.detailsArray objectAtIndex:indexPath.row] isEqualToString:RES_BODY]){
+        static NSString *simpleTableIdentifier = @"ResponseBodyTableViewCell";
+        
+        ResponseBodyTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+        
+      
+        if ([self noError])
+        {
+            detail = [[NSString alloc] initWithData:self.data encoding:NSUTF8StringEncoding];
+        }
+        cell.titletextLabel.text = title;
+        cell.detailtextLabel.text = detail;
+        
+        return cell;
+    }
+    
     
     
     NSString* cellIdentifier = @"cell";
@@ -185,8 +218,6 @@
     if (!cell) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
     }
-    NSString* title = [self.detailsArray objectAtIndex:indexPath.row];
-    NSString* detail = @"N/A";
     
     if ([[self.detailsArray objectAtIndex:indexPath.row] isEqualToString:REQ_URL]){
         detail = self.request.URL.absoluteString;
@@ -245,12 +276,7 @@
             detail = [[NSString alloc] initWithData:self.request.HTTPBody encoding:NSUTF8StringEncoding];
         }
     }
-    else if ([[self.detailsArray objectAtIndex:indexPath.row] isEqualToString:RES_BODY]){
-        if ([self noError])
-        {
-            detail = [[NSString alloc] initWithData:self.data encoding:NSUTF8StringEncoding];
-        }
-    }
+
     else if ([[self.detailsArray objectAtIndex:indexPath.row] isEqualToString:GEN_DURATION]){
         if ([self noError])
         {

@@ -19,6 +19,7 @@
 #import "NLRequestListViewController.h"
 #import "NLWindow.h"
 #import "NSURLSession+Observer.h"
+#import "ResponseBodyTableViewCell.h"
 
 FOUNDATION_EXPORT double NetLoggerVersionNumber;
 FOUNDATION_EXPORT const unsigned char NetLoggerVersionString[];

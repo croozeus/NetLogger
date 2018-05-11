@@ -39,6 +39,12 @@
 
 - (NSURLSessionDataTask *)mdataTaskWithRequest:(NSURLRequest *)request completionHandler:(void (^)(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error))completionHandler{
     
+    
+    if ([[request.allHTTPHeaderFields allKeys] containsObject:@"Accept"] && [[request.allHTTPHeaderFields objectForKey:@"Accept"] containsString:@"image"])
+    {
+        return [self mdataTaskWithRequest:request completionHandler:completionHandler];
+    }
+    
     NSTimeInterval  requestTime = [[NSDate date] timeIntervalSince1970];
     __block NSString *requestTimeString = [NSString stringWithFormat:@"%f", requestTime];
     

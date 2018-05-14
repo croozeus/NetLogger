@@ -15,10 +15,6 @@ NetLogger is a library to keep track of all the network requests made by your ap
 
 The library can be used for debugging network calls, see the exact url and payload sent or received in the request right from with the app interface. Using the library enables a special debug user interface that can be launched within the app. All the details of the network requests can be viewed within this UI itself. There is no need for the device to be connected to XCode (not even wirelessly!) when debugging network requests.
 
-Below is a demo of NetLogger integrated with an app:
-
-[![Video Demo for NetLogger](https://img.youtube.com/vi/zNZmZIXn10M/0.jpg)](https://www.youtube.com/watch?v=zNZmZIXn10M)
-
 
 ## Installation
 
@@ -55,7 +51,9 @@ If you like, we have included a small example project that you could quickly try
 
 ## NetLogger Interface
 
-The NetLogger launch button should show up on the right of your app if you enabled the pod properly. The launch button has high z-index so it would typically appear on top of your app at all times, except when you use system dialogs or keyboards.
+[![Video Demo for NetLogger](https://img.youtube.com/vi/zNZmZIXn10M/0.jpg)](https://www.youtube.com/watch?v=zNZmZIXn10M)
+
+The NetLogger launch button should show up on the right of your app if you enabled the pod properly. The launch button has high z-index so it would typically appear on top of your app at all times, except when you use system dialogs or keyboards. The launch button would become yellow when there is a request in progress. 
 
 Clicking the launch button would present the NetLogger interface. The first screen shows you a list of network requests with the time of requests. It also lists the type of request, for e.g. `GET`, `POST`, `PUT`, etc. A circle of color (Yellow, Red or Green) is shown beside each request. 
 

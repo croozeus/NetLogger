@@ -15,6 +15,11 @@ NetLogger is a library to keep track of all the network requests made by your ap
 
 The library can be used for debugging network calls, see the exact url and payload sent or received in the request right from with the app interface. Using the library enables a special debug user interface that can be launched within the app. All the details of the network requests can be viewed within this UI itself. There is no need for the device to be connected to XCode (not even wirelessly!) when debugging network requests.
 
+Below is a demo of NetLogger integrated with an app:
+
+[![Video Demo for NetLogger](https://img.youtube.com/vi/zNZmZIXn10M/0.jpg)](https://www.youtube.com/watch?v=zNZmZIXn10M)
+
+
 ## Installation
 
 NetLogger is distributed as a cocoapod, so if you are familiar with using cocoapods this should be a breeze. Include the following in your pod file and do 'pod install' or 'pod update'.

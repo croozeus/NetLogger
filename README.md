@@ -26,7 +26,7 @@ The usage is as simple as including the following lines in your `AppDelegate.m` 
 
 ```objective-c
 #import <NetLogger/NetLogger.h>
-'''
+```
 
 2) In `application:didFinishLaunchingWithOptions:` method add the following lines.
 

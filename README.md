@@ -24,6 +24,15 @@ NetLogger is distributed as a cocoapod, so if you are familiar with using cocoap
 pod 'NetLogger'
 ```
 
+For Swift projects, you should also add or uncomment the ```use_frameworks!``` line in your ```Podfile```
+
+```ruby
+use_frameworks!
+
+pod 'NetLogger'
+```
+
+
 ## Usage
 
 The usage is as simple as including the following lines in your `AppDelegate.m` file.
@@ -44,6 +53,23 @@ NetLogger* nl = [NetLogger sharedManager];
 That's it. Now run your application, you should see a launch button floating on the right of your app. Clicking this button would launch the NetLogger interface.
 
 Currently, the NetLogger launch button can be shown in either left, right, top or bottom positions. You may use `ALIGN_RIGHT`, `ALIGN_LEFT`, `ALIGN_TOP` or `ALIGN_BOTTOM` as you like. 
+
+## Usage with Swift Projects
+
+For Swift, 
+
+1) Import the framework to your `AppDelegate.swift` file.
+
+```swift
+import NetLogger
+```
+
+2) Add the following lines to application `application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?)` 
+
+```swift
+let nl = NetLogger.sharedManager() as! NetLogger;
+nl.show(NetLoggerAlign.ALIGN_RIGHT);
+```
 
 ## Example
 

@@ -7,7 +7,7 @@
 [![License](https://img.shields.io/cocoapods/l/NetLogger.svg?style=flat)](https://cocoapods.org/pods/NetLogger)
 [![Platform](https://img.shields.io/cocoapods/p/NetLogger.svg?style=flat)](https://cocoapods.org/pods/NetLogger)
 <a href="https://twitter.com/intent/follow?screen_name=versionnstudios">
-        <img src="https://img.shields.io/twitter/follow/shields_io.svg?style=social&logo=twitter"
+        <img src="https://img.shields.io/twitter/follow/versionnstudios.svg?style=social&logo=twitter"
             alt="follow on Twitter">
 </a>
 

@@ -1,4 +1,6 @@
-# NetLogger
+<p align="center" >
+  <img src="https://raw.githubusercontent.com/croozeus/NetLogger/master/NetLogger.png" alt="NetLogger" title="NetLogger">
+</p>
 
 [![CI Status](https://img.shields.io/travis/croozeus/NetLogger.svg?style=flat)](https://travis-ci.org/croozeus/NetLogger)
 [![Version](https://img.shields.io/cocoapods/v/NetLogger.svg?style=flat)](https://cocoapods.org/pods/NetLogger)

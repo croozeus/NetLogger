@@ -72,3 +72,7 @@ NetLogger is owned and mantained by [VersionN Studios](https://versionn.com). Th
 ## License
 
 NetLogger is available under the BSD license. See the LICENSE file for more info.
+
+## Contributions
+
+We welcome contributions to NetLogger. Please submit a pull request with details of what you have fixed, added or updated and we should review and merge/discuss as appropriate. 

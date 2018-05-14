@@ -6,6 +6,10 @@
 [![Version](https://img.shields.io/cocoapods/v/NetLogger.svg?style=flat)](https://cocoapods.org/pods/NetLogger)
 [![License](https://img.shields.io/cocoapods/l/NetLogger.svg?style=flat)](https://cocoapods.org/pods/NetLogger)
 [![Platform](https://img.shields.io/cocoapods/p/NetLogger.svg?style=flat)](https://cocoapods.org/pods/NetLogger)
+<a href="https://twitter.com/intent/follow?screen_name=versionnstudios">
+        <img src="https://img.shields.io/twitter/follow/shields_io.svg?style=social&logo=twitter"
+            alt="follow on Twitter">
+</a>
 
 NetLogger is a library to keep track of all the network requests made by your app. The library can be used to track all HTTP requests (`GET`, `POST`, `PUT`, `UPDATE`, `HEAD`, etc.) and see details of all the requests made. The details include info like request URL, request & response headers, request and response body, request and response time, round trip duration, etc. amongst other details. 
 

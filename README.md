@@ -95,6 +95,10 @@ Clicking on a request would show the details of the request. The details would i
 
 ## Troubleshooting & Feedback
 
+Some common troubleshooting:
+1) If you are using Google Auth in your app, we suggest doing the auth first and then enabling the NetLogger. 
+2) If you have problems in installalling the pod, you may want to do a `pod update` or `pod repo update`
+
 The best place to ask for help would be the GitHub issues section. Just post what you need help with and we will get in touch. 
 
 If you have any feedback, please do not hesitate to share with us. We plan to update the library from time to time to make it more powerful!
